@@ -1,101 +1,109 @@
 import Image from "next/image";
 
+import {
+  FiSmartphone,
+  FiActivity,
+  FiUsers,
+  FiArrowRight
+} from "react-icons/fi";
+
+import logo from "@/assets/images/strong-bear.webp";
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="bg-card text-secondary-foreground py-20 px-4">
+        <div className="container mx-auto text-center">
+          <img
+            src={logo.src}
+            alt="FitTrack Logo"
+            className="w-24 h-24 mx-auto mb-6 rounded-full"
+          />
+          <h1 className="text-4xl font-bold mb-4">FitTrack</h1>
+          <p className="text-xl mb-8">
+            Transforme seus treinos com o poder dos dados
+          </p>
+          <Button className="rounded-full font-bold text-lg" size="lg">
+            Baixe Agora
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+      <div className="py-20 px-4 text-secondary-foreground ">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 ">
+            Por que escolher o FitTrack?
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="flex items-center mb-4">
+                <FiSmartphone className="text-blue-500 text-2xl mr-2" />
+                <h3 className="text-xl font-semibold">Fácil de Usar</h3>
+              </div>
+              <p>
+                Interface intuitiva para registrar seus treinos rapidamente.
+              </p>
+            </div>
+            <div>
+              <div className="flex items-center mb-4">
+                <FiActivity className="text-blue-500 text-2xl mr-2" />
+                <h3 className="text-xl font-semibold">
+                  Acompanhe seu Progresso
+                </h3>
+              </div>
+              <p>
+                Gráficos detalhados para visualizar sua evolução ao longo do
+                tempo.
+              </p>
+            </div>
+            <div>
+              <div className="flex items-center mb-4">
+                <FiUsers className="text-blue-500 text-2xl mr-2" />
+                <h3 className="text-xl font-semibold">Comunidade</h3>
+              </div>
+              <p>
+                Conecte-se com outros entusiastas do fitness e compartilhe suas
+                conquistas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-card py-20 px-4 text-secondary-foreground ">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            O que nossos usuários dizem
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 text-secondary">
+            <div className="bg-secondary-foreground p-6 rounded-lg shadow-md">
+              <p className="italic mb-4">
+                "FitTrack revolucionou meus treinos. Agora posso ver claramente
+                meu progresso e isso me motiva ainda mais!"
+              </p>
+              <p className="font-semibold">- Maria S.</p>
+            </div>
+            <div className="bg-secondary-foreground p-6 rounded-lg shadow-md">
+              <p className="italic mb-4">
+                "A facilidade de uso e os insights fornecidos pelo app são
+                incríveis. Recomendo a todos!"
+              </p>
+              <p className="font-semibold">- João P.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="py-20 px-4 text-center text-secondary-foreground ">
+        <h2 className="text-3xl font-bold mb-8">
+          Pronto para transformar seus treinos?
+        </h2>
+        <Button className="rounded-full font-bold text-base" size="lg">
+          Comece Agora
+          <FiArrowRight className="ml-2" />
+        </Button>
+      </div>
+    </>
   );
 }
